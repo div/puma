@@ -382,7 +382,7 @@ module Puma
       clustered = @options[:workers] > 0
 
       if clustered
-        @events = PidEvents.new STDOUT, STDERR
+        @events = Puma::PidEvents.new STDOUT, STDERR
         @options[:logger] = @events
       end
 
