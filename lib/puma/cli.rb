@@ -8,6 +8,7 @@ require 'puma/binder'
 require 'puma/detect'
 require 'puma/daemon_ext'
 require 'puma/util'
+require 'puma/events'
 
 require 'rack/commonlogger'
 require 'rack/utils'
@@ -290,7 +291,7 @@ module Puma
       end
     end
 
-    def set_rack_environment 
+    def set_rack_environment
       # Try the user option first, then the environment variable,
       # finally default to development
 
